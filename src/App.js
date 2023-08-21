@@ -5,12 +5,14 @@ import { Button } from './Components/Button';
 import { Content } from './Components/Content';
 import ListItem from './Components/ListItem';
 import Input from './Components/Input';
+import Search from './Components/Search';
 
 function App() {
 
   const [skills, setSkills] = useState([]);
   const [inputText, setInputText] = useState("");
   const [key, setKey] = useState(1);
+  const [searchInput, setSearchInput] = useState("");
 
   function handleChange(e){
     setInputText(e.target.value)
@@ -25,10 +27,18 @@ function App() {
     setInputText("");
   }
 
+  function handleSearch(e){
+    setSearchInput(e.target.value)
+  }
+
   return (
     <div className="App">
       <h1>I have below skills</h1>
-      <ListItem key={key} skills={skills} />
+      <Search 
+        searchInput={searchInput}
+        handleSearch={handleSearch}
+      />
+      <ListItem key={key} skills={skills.filter(skill => skill.toLowerCase().includes(searchInput.toLowerCase()))}/>
       <hr />
       <h2>Add new skills</h2>
       <Input 

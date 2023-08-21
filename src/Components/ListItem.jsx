@@ -4,7 +4,7 @@ import LineItem from './LineItem'
 const ListItem = ({skills}) => {
   return (
     <ol>
-        {skills.map((skill) => <LineItem skill={skill} /> )}
+        {skills.map((skill) => <LineItem skill={skill} />)}
     </ol>
   )
 }
