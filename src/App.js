@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+
+import { useState } from 'react';
 import './App.css';
+import { Button } from './Components/Button';
+import { Content } from './Components/Content';
 
 function App() {
+
+  const [displayText, setDisplyText] = useState("Press any button");
+
+  function handleClick(name){
+    setDisplyText(name);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Button 
+        
+        btnName="TRUE"
+        handleClick={handleClick}
+      />
+      <Button 
+        btnName="FALSE"
+        handleClick={handleClick}
+      />
+      <Content 
+        text = {displayText}
+      />
     </div>
   );
 }

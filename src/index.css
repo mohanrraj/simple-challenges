@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.true-btn{
+  background-color: purple;
+  padding: 5px;
+  color: white;
+  border-radius: 3px;
+  border-color: purple;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+/* button:hover{
+  background-color: white;
+  color : black
+} */
+
+.false-btn{
+  background-color: red;
+  padding: 5px;
+  color: white;
+  border-radius: 3px;
+  border-color: red;
+  margin-right: 15px;
+  margin-left: 15px;
+}
