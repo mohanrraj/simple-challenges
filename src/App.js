@@ -6,6 +6,7 @@ import { Content } from './Components/Content';
 import ListItem from './Components/ListItem';
 import Input from './Components/Input';
 import Search from './Components/Search';
+import Date from './Components/Date';
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
 
   return (
     <div className="App">
+      <Date />
       <h1>I have below skills</h1>
       <Search 
         searchInput={searchInput}
